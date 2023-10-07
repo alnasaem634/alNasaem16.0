@@ -68,7 +68,7 @@ class PaymentTransaction(models.Model):
         else:
             customer_mobile = customer_mobile[0]
         payment_details = {
-            "PaymentMethodId": 1,
+            "PaymentMethodId": 0,
             "CustomerName": self.partner_name,
             "DisplayCurrencyIso": self.currency_id.name,
             "CustomerMobile": customer_mobile,
