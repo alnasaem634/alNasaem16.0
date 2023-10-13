@@ -28,7 +28,7 @@ class AcquirerMyFatoora(models.Model):
 
     @api.model
     def _get_authorize_urls(self):
-        base_url = self.get_base_url()
+        base_url = "https://www.alnasaem.com/
         """ MyFatoora URLS """
         return base_url + 'shop/myfatoora/payment/'
 
