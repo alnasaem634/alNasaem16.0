@@ -28,7 +28,7 @@ class AcquirerMyFatoora(models.Model):
 
     @api.model
     def _get_authorize_urls(self):
-        base_url = "https://www.alnasaem.com/
+        base_url = self.get_base_url()
         """ MyFatoora URLS """
         return base_url + 'shop/myfatoora/payment/'
 
@@ -40,7 +40,7 @@ class AcquirerMyFatoora(models.Model):
     @api.model
     def _get_myfatoora_urls(self):
 
-        base_url = "https://www.alnasaem.com/"
+        base_url = self.get_base_url()
         """ MyFatoora URLS """
 
         return {
@@ -70,7 +70,7 @@ class AcquirerMyFatoora(models.Model):
             "SendInvoiceOption": 1,
             "CallBackUrl": self.get_base_url(),
             "ErrorUrl": self.get_base_url(),
-            'return_url': self.get_base_url(),
+            'return_url': "https://alnasaem.com",
             "Language": 1,
             "SourceInfo": "",
             "Environment": self.state
