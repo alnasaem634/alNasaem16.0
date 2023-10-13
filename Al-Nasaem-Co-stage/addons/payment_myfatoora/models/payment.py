@@ -70,7 +70,7 @@ class AcquirerMyFatoora(models.Model):
             "SendInvoiceOption": 1,
             "CallBackUrl": self.get_base_url(),
             "ErrorUrl": self.get_base_url(),
-            'return_url': self.get_base_url(),,
+            'return_url': self.get_base_url(),
             "Language": 1,
             "SourceInfo": "",
             "Environment": self.state
